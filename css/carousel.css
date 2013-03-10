@@ -1,0 +1,144 @@
+/* Constants */
+.carousel {
+  background-color: #dddddd;
+  border: 1px solid #dddddd;
+  margin: 0 0 16px;
+  overflow: hidden;
+  position: relative;
+}
+.carousel ul {
+  margin: 0;
+  white-space: nowrap;
+}
+.carousel li {
+  background: 0;
+  margin: 0;
+  padding: 0;
+}
+.carousel .slides li {
+  background-color: #000000;
+  display: inline-block;
+  position: relative;
+  white-space: normal;
+  width: 100%;
+}
+.carousel .slides li a {
+  display: block;
+}
+.carousel .slides .selected {
+  display: inline-block;
+}
+.carousel .slides .selected ~ .selected {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.carousel .caption {
+  background: #000000;
+  background: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  padding: 8px 12px;
+  position: absolute;
+  right: 0;
+}
+.carousel h3 {
+  color: #ffffff;
+  margin: 0 0 4px;
+}
+.carousel p {
+  color: #ffffff;
+  margin: 0 0 4px;
+}
+.carousel p a {
+  color: #ffffff;
+  margin: 0 0 8px;
+}
+.carousel p a:hover,
+.carousel p a:focus {
+  text-decoration: none;
+}
+.carousel img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.carousel .more {
+  color: #ffffff;
+  display: block;
+  text-decoration: underline;
+}
+.carousel .more:after {
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #ffffff;
+  border-top: 5px solid transparent;
+  content: '';
+  display: inline-block;
+  font-size: 1.1em;
+  line-height: 1.4545;
+  height: 0;
+  margin: 0 0 0 4px;
+  vertical-align: middle;
+  width: 0;
+}
+.carousel .more:hover,
+.carousel .more:focus {
+  text-decoration: none;
+}
+.carousel .thumbs {
+  float: left;
+  margin: 8px 10px 7px;
+}
+.carousel .thumbs li {
+  background-color: #ffffff;
+  border: 2px solid #bbbbbb;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  height: 8px;
+  margin: 4px 0 0 4px;
+  text-indent: -1000em;
+  vertical-align: middle;
+  width: 8px;
+}
+.carousel .thumbs .selected {
+  background-color: #bbbbbb;
+  height: 12px;
+  width: 12px;
+}
+.carousel .controls {
+  float: right;
+  margin: 8px 10px 7px;
+}
+.carousel .controls li {
+  background-color: #ffffff;
+  border: 2px solid #bbbbbb;
+  border-radius: 10px;
+  color: #000000;
+  cursor: pointer;
+  line-height: 1.2;
+  padding: 2px 4px;
+  text-decoration: none;
+}
+.carousel .controls li:hover,
+.carousel .controls li:focus {
+  background-color: #bbbbbb;
+}
+@media (max-width: 580px) {
+  .carousel .caption {
+    display: none;
+  }
+}
+.jsDisabled .carousel .thumbs,
+.jsDisabled .carousel .controls {
+  display: none;
+}
+.ie7 .carousel .thumbs li {
+  float: left;
+}
+.ie7 .carousel .slides li {
+  float: left;
+}

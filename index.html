@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]><html lang="en" class="ie7"><![endif]-->
+<!--[if IE 8]><html lang="en" class="ie8"><![endif]-->
+<!--[if !IE]><!--><html lang="en"><!--<![endif]-->
+	<head>
+		
+		<meta charset="utf-8" />
+
+		<title>jQuery Carousel</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link href="css/structure.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="css/main.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="css/carousel.css" rel="stylesheet" type="text/css" media="screen" />
+
+	</head>
+<body class="default jsDisabled">
+	<script type="text/javascript">document.body.className = document.body.className.replace('jsDisabled', '');</script>
+	
+	<div id="wrapper" class="wrapper">
+		<div id="inner-wrapper" class="inner-wrapper">
+
+			<div class="five-col clear">
+				<div class="carousel">
+					<div class="sleeve">
+						<ul class="slides">
+							<li class="selected">
+								<a href="#">
+									<div class="caption">
+										<p>Culpa ball tip pork chop flank eiusmod excepteur ground round, pork loin turducken in ad pariatur filet mignon id&hellip;</p>
+									</div>
+									<img src="http://www.lorempixum.com/g/940/529/sports" alt="" />
+								</a>
+							</li><li>
+								<a href="#">
+									<div class="caption">
+										<p>Ut biltong ut commodo, in meatloaf enim bacon pig salami labore&hellip;</p>
+									</div>
+									<img src="http://www.lorempixum.com/g/940/529/people" alt="" />
+								</a>
+							</li><li>
+								<a href="#">
+									<div class="caption">
+										<h3>Enim bacon pig salami</h3>
+										<p>Tongue short loin tenderloin strip steak&hellip;</p>
+										<span class="more">More</span>
+									</div>
+									<img src="http://www.lorempixum.com/g/940/529/food" alt="" />
+								</a>
+							</li><li>
+								<a href="#">
+									<div class="caption">
+										<p>Ribeye esse do in, biltong corned beef mollit tenderloin pig&hellip;</p>
+									</div>
+									<img src="http://www.lorempixum.com/g/940/529/abstract" alt="" />
+								</a>
+							</li><li>
+								<a href="#">
+									<div class="caption">
+										<p>Aliqua excepteur irure qui anim pork. Cow prosciutto dolor ut ground round sirloin salami kielbasa pork chop in beef cillum&hellip;</p>
+									</div>
+									<img src="http://www.lorempixum.com/g/940/529/transport" alt="" />
+								</a>
+							</li>
+						</ul>
+						<ul class="thumbs"></ul>
+						<ul class="controls">
+							<li tabindex="0" class="play">play</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="six-col clear"></div>
+
+			<div class="seven-col clear"></div>
+
+			<div class="eight-col clear"></div>
+
+			<div class="nine-col clear"></div>
+
+			<div class="ten-col clear"></div>
+
+			<div class="eleven-col clear"></div>
+
+			<div class="twelve-col clear"></div>
+
+		</div>
+	</div>
+
+	<script src="javascript/jquery-1.9.1.min.js" type="text/javascript"></script>
+	<script src="javascript/jquery.event.swipe.js" type="text/javascript"></script>
+	<script src="javascript/jquery.event.move.js" type="text/javascript"></script>
+	<script src="javascript/carousel.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		(function($){
+			$('.inner-wrapper > div:not(.five-col)').html($('.five-col').html()); // Save having to repeat code
+			$(function(){
+				$('.carousel').carousel({
+					fx: 'slide'
+				});
+			});
+		})(jQuery);
+	</script>
+</body>
+</html>

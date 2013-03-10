@@ -1,0 +1,87 @@
+html {
+	font-size: 100%;
+}
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #F9F9F9;
+	color: #1F1F1F;
+	font: 62.5% Arial,Helvetica,sans-serif;
+	line-height: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+img,
+blockquote,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+form,
+fieldset {
+	border: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3 {
+	color: #1F1F1F;
+	font-family: Futura,"Trebuchet MS",Arial,sans-serif;
+	font-weight: normal;
+	margin-bottom: 16px;
+}
+
+h1 {
+	font-size: 2.4em;
+	line-height: 1.1667;
+}
+
+h2 {
+	font-size: 1.8em;
+	line-height: 1.33334;
+	margin-bottom: 12px;
+}
+
+h3 {
+	font-size: 1.6em;
+	line-height: 1.25;
+	margin-bottom: 12px;
+}
+
+p {
+	font-size: 1.2em;
+	line-height: 1.33334;
+	margin-bottom: 16px;
+}
+
+a:link,
+a:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover,
+a:active {
+	text-decoration: underline;
+}
+
+img {
+	max-width: 100%;
+}

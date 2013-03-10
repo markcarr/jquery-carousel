@@ -1,0 +1,179 @@
+/* Constants */
+@color1: #000;
+@color2: #FFF;
+@color3: #DDD;
+@color4: #BBB;
+
+.carousel {
+	background-color: @color3;
+	border: 1px solid @color3;
+	margin: 0 0 16px;
+	overflow: hidden;
+	position: relative;
+
+	ul {
+		margin: 0;
+		white-space: nowrap;
+	}
+
+	li {
+		background: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+	.slides {
+		li {
+			background-color: @color1;
+			display: inline-block;
+			position: relative;
+			white-space: normal;
+			width: 100%;
+
+			a {
+				display: block;
+			}
+		}
+			
+		.selected {
+			display: inline-block;
+		}
+
+		.selected ~ .selected {
+			left: 0;
+			position: absolute;
+			top: 0;
+		}
+	}
+
+	.caption {
+		background: @color1;
+		background: rgba(0,0,0,.7);
+		bottom: 0;
+		left: 0;
+		overflow: hidden;
+		padding: 8px 12px;
+		position: absolute;
+		right: 0;
+	}
+
+	h3 {
+		color: @color2;
+		margin: 0 0 4px;
+	}
+
+	p {
+		color: @color2;
+		margin: 0 0 4px;
+
+		a {
+			color: @color2;
+			margin: 0 0 8px;
+
+			&:hover,
+			&:focus {
+				text-decoration: none;
+			}
+		}
+
+	}
+
+	img {
+		display: block;
+		margin: 0 auto;
+		max-width: 100%;
+	}
+
+	.more {
+		color: @color2;
+		display: block;
+		text-decoration: underline;
+
+		&:after {
+			border-bottom: 5px solid transparent;
+			border-left: 5px solid @color2;
+			border-top: 5px solid transparent;
+			content: '';
+			display: inline-block;
+			font-size: 1.1em;
+			line-height: 1.4545;
+			height: 0;
+			margin: 0 0 0 4px;
+			vertical-align: middle;
+			width: 0;
+		}
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+	}
+
+	.thumbs {
+		float: left;
+		margin: 8px 10px 7px;
+
+		li {
+			background-color: @color2;
+			border: 2px solid @color4;
+			-moz-border-radius: 50%;
+			-webkit-border-radius: 50%;
+			border-radius: 50%;
+			cursor: pointer;
+			display: inline-block;
+			height: 8px;
+			margin: 4px 0 0 4px;
+			text-indent: -1000em;
+			vertical-align: middle;
+			width: 8px;
+		}
+
+		.selected {
+			background-color: @color4;
+			height: 12px;
+			width: 12px;
+		}
+	}
+
+	.controls {
+		float: right;
+		margin: 8px 10px 7px;
+
+		li {
+			background-color: @color2;
+			border: 2px solid @color4;
+			border-radius: 10px;
+			color: @color1;
+			cursor: pointer;
+			line-height: 1.2;
+			padding: 2px 4px;
+			text-decoration: none;
+
+			&:hover,
+			&:focus {
+				background-color: @color4;
+			}
+		}
+	}
+}
+
+@media (max-width: 580px) {
+	.carousel .caption {
+		display: none;
+	}
+}
+
+.jsDisabled .carousel .thumbs,
+.jsDisabled .carousel .controls {
+	display: none;
+}
+
+.ie7 .carousel {
+	.thumbs li {
+		float: left;
+	}
+
+	.slides li {
+		float: left;
+	}
+}
