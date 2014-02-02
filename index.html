@@ -95,14 +95,17 @@
 	<script src="javascript/carousel.js" type="text/javascript"></script>
 
 	<script type="text/javascript">
-		(function($){
-			$('.inner-wrapper > div:not(.five-col)').html($('.five-col').html()); // Save having to repeat code
-			$(function(){
-				$('.carousel').carousel({
-					fx: 'slide'
+		;(function($, window, document){
+			$(document).ready(function(){
+				$('.inner-wrapper > div:not(.five-col)').html($('.five-col').html()); // Save having to repeat code
+
+				$('.carousel').each(function(){
+					new App.Carousel(this, {
+						fx: 'slide'
+					});
 				});
 			});
-		})(jQuery);
+		})(jQuery, window, document);
 	</script>
 </body>
 </html>
