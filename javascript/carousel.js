@@ -23,7 +23,10 @@ var App = {};
 			fx: 'fade'
 		},
 
+
 		initialise: function(){
+			this.$slidesList = this.element.find('.slides li');
+			
 			if(this.$slidesList.length > 1){
 				this.$current = 1;
 
@@ -40,7 +43,6 @@ var App = {};
 
 		setElements: function(){
 			this.$slidesWrapper = this.element.find('.slides');
-			this.$slidesList = this.element.find('.slides li');
 			this.$thumbsWrapper = this.element.find('.thumbs');
 		},
 
