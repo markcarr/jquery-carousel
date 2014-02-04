@@ -68,11 +68,16 @@ var App = {};
 			});
 
 			this.$slidesList.on('swiperight', function(){
-				if(self.$current !== 1){
+				if(self.$current === 1){
+					self.$current = self.$slidesList.length-1;
+				} else if(self.$current === 0){
+					self.$current = self.$slidesList.length-2;
+				} else {
 					self.$current = self.$current - 2;
-					self.playPause();
-					self.rotate(true);
 				}
+
+				self.playPause();
+				self.rotate(true);
 			});
 		},
 
@@ -82,7 +87,7 @@ var App = {};
 			this.$slidesList.each(function(index){
 				index++;
 
-				var selected = (index == 1) ? 'selected' : '';
+				var selected = (index === 1) ? 'selected' : '';
 
 				self.$thumbsWrapper.append('<li tabindex="0" class="' + selected + '">view slide ' + index + '</li>');
 			});
